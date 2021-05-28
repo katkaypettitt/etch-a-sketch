@@ -1,4 +1,3 @@
-/* Select elements on the page */
 const canvas = document.querySelector('#etch-a-sketch');
 const ctx = canvas.getContext('2d');
 const shakebutton = document.querySelector('.shake');
@@ -30,7 +29,6 @@ function draw({ key }) {
   hue += 20;
   ctx.strokeStyle = `hsl(${Math.random() * 360},100%, 50%)`;
 
-  console.log(key);
   ctx.beginPath();
   ctx.moveTo(x, y);
   switch (key) {
@@ -61,7 +59,18 @@ function handleKey(event) {
   }
 }
 
-/* Clear/shake function */
+/* Clear function */
+function clearCanvas() {
+  canvas.classList.add('shake');
+  ctx.clearRect(0, 0, width, height);
+  canvas.addEventListener(
+    'animationend',
+    function () {
+      canvas.classList.remove('shake');
+    },
+    { once: true }
+  );
+}
 
-/* Listen for arrow keys */
-window.addEventListener('keydown', handleKey);
+window.addEventListener('keydown', handleKey); // Listen for arrow keys
+shakebutton.addEventListener('click', clearCanvas);
