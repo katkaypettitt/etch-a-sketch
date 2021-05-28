@@ -17,6 +17,8 @@ ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 30;
 
+let hue = 0;
+ctx.strokeStyle = `hsl(${hue},100%, 50%)`;
 ctx.beginPath();
 ctx.moveTo(x, y);
 ctx.lineTo(x, y);
@@ -24,6 +26,10 @@ ctx.stroke();
 
 /* Draw function */
 function draw({ key }) {
+  // Increment the hue
+  hue += 20;
+  ctx.strokeStyle = `hsl(${Math.random() * 360},100%, 50%)`;
+
   console.log(key);
   ctx.beginPath();
   ctx.moveTo(x, y);
