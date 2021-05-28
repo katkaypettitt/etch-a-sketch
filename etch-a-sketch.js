@@ -2,7 +2,7 @@
 const canvas = document.querySelector('#etch-a-sketch');
 const ctx = canvas.getContext('2d');
 const shakebutton = document.querySelector('.shake');
-const MOVE_AMOUNT = 20;
+const MOVE_AMOUNT = 35;
 
 /* Setup canvas for drawing */
 
@@ -27,8 +27,22 @@ function draw({ key }) {
   console.log(key);
   ctx.beginPath();
   ctx.moveTo(x, y);
-  x -= MOVE_AMOUNT;
-  y -= MOVE_AMOUNT;
+  switch (key) {
+    case 'ArrowUp':
+      y -= MOVE_AMOUNT;
+      break;
+    case 'ArrowRight':
+      x += MOVE_AMOUNT;
+      break;
+    case 'ArrowDown':
+      y += MOVE_AMOUNT;
+      break;
+    case 'ArrowLeft':
+      x -= MOVE_AMOUNT;
+      break;
+    default:
+      break;
+  }
   ctx.lineTo(x, y);
   ctx.stroke();
 }
