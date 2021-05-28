@@ -2,7 +2,7 @@
 
 > Virtual etch-a-sketch made with JavaScript, CSS, and HTML
 
-![Hi drawn in my etch-a-sketch](https://static.wixstatic.com/media/d051dc_18180aa559ea4c9f9e175e11ad678114~mv2.gif)
+![Hi drawn in my etch-a-sketch](https://static.wixstatic.com/media/d051dc_aef6fea4acc442a4aab594699eebc13c~mv2.gif)
 
 ## General info
 
