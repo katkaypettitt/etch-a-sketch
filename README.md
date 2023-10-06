@@ -15,7 +15,3 @@ The 'Shake!' button resets the board and shakes the canvas, just like a real etc
 -   JavaScript (vanilla🍦)
 -   CSS
 -   HTML
-
-## Contact
-
-Created by [@katrinaalaimo](https://www.katrinaalaimo.com/) — feel free to contact me!
